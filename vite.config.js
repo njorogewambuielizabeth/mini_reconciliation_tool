@@ -5,6 +5,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',   // ← this exposes it to Replit
-    port: 3000        // ← default Vite port
+    port: 5000        // ← default Vite port
   }
 })
