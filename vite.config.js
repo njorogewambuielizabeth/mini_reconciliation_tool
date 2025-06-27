@@ -8,10 +8,9 @@ export default defineConfig({
     port: 5000,
     strictPort: true,
     hmr: {
-      clientPort: 443
+      clientPort: 443, // Replit uses HTTPS
     },
-    origin: 'https://'+process.env.REPL_SLUG+'.'+process.env.REPL_OWNER+'.repl.co',
-    // Override default behavior to allow any Replit domain
+    origin: `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`,
     allowedHosts: 'all',
-  }
+  },
 })
