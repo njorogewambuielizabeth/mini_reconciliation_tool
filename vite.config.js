@@ -6,9 +6,12 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 5000,
-    allowedHosts: [
-      'all',
-      'b11b8f3d-4905-49ce-84bd-4e16cae71379-00-23w6s44pz5cu1.kirk.replit.dev' // your Replit URL
-    ]
+    strictPort: true,
+    hmr: {
+      clientPort: 443
+    },
+    origin: 'https://'+process.env.REPL_SLUG+'.'+process.env.REPL_OWNER+'.repl.co',
+    // Override default behavior to allow any Replit domain
+    allowedHosts: 'all',
   }
 })
